@@ -1,4 +1,3 @@
-import 'package:fl_components/screens/listview1_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,11 +16,12 @@ class HomeScreen extends StatelessWidget {
                 title: const Text('Nombre de ruta'),
                 leading: const Icon(Icons.account_circle_outlined),
                 onTap: () {
-                  final route = MaterialPageRoute(
-                    builder: (context) => const Listview1Screen(),
-                  );
+                  //Con este metodo puedes colocar la ruta directamente
+                  Navigator.pushNamed(context, "listview2");
 
-                  Navigator.pushNamed(context, "listview1");
+                  // final route = MaterialPageRoute(
+                  //   builder: (context) => const Listview1Screen(),
+                  // );
 
                   // Con este metodo puedes volver hacia atras
                   // Navigator.push(context, route);
