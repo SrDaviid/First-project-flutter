@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
                 },
               ),
           separatorBuilder: (_, __) => const Divider(),
-          itemCount: 100),
+          itemCount: 5),
     );
   }
 }
