@@ -12,7 +12,7 @@ class AppRoutes {
         route: 'home',
         name: 'Home Screen',
         screen: const HomeScreen(),
-        icon: Icons.home_mini),
+        icon: Icons.home_rounded),
 
     MenuOption(
         route: 'listview1',
@@ -24,7 +24,7 @@ class AppRoutes {
         route: 'listview2',
         name: 'Listview Type 2',
         screen: const Listview2Screen(),
-        icon: Icons.list_alt_rounded),
+        icon: Icons.list_outlined),
 
     MenuOption(
         route: 'alert',

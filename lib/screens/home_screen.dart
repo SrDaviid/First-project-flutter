@@ -1,3 +1,4 @@
+import 'package:fl_components/router/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,11 +14,13 @@ class HomeScreen extends StatelessWidget {
       ),
       body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
-                title: const Text('Nombre de ruta'),
-                leading: const Icon(Icons.account_circle_outlined),
+                title: Text(AppRoutes.menuOptions[index].name),
+                leading: Icon(AppRoutes.menuOptions[index].icon,
+                    color: Colors.indigo),
                 onTap: () {
                   //Con este metodo puedes colocar la ruta directamente
-                  Navigator.pushNamed(context, "listview2");
+                  Navigator.pushNamed(
+                      context, AppRoutes.menuOptions[index].route);
 
                   // final route = MaterialPageRoute(
                   //   builder: (context) => const Listview1Screen(),
@@ -31,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                 },
               ),
           separatorBuilder: (_, __) => const Divider(),
-          itemCount: 5),
+          itemCount: AppRoutes.menuOptions.length),
     );
   }
 }
