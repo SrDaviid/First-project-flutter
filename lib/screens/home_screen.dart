@@ -10,7 +10,6 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Componentes de flutter"),
         centerTitle: true,
-        elevation: 0,
       ),
       body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
