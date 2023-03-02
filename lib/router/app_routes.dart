@@ -19,6 +19,24 @@ class AppRoutes {
         name: 'Listview Type 1',
         screen: const Listview1Screen(),
         icon: Icons.list_alt),
+
+    MenuOption(
+        route: 'listview2',
+        name: 'Listview Type 2',
+        screen: const Listview2Screen(),
+        icon: Icons.list_alt_rounded),
+
+    MenuOption(
+        route: 'alert',
+        name: 'AlertScreen',
+        screen: const AlertScreen(),
+        icon: Icons.add_alert_outlined),
+
+    MenuOption(
+        route: 'card',
+        name: 'CardScreen',
+        screen: const CardScreen(),
+        icon: Icons.credit_card_rounded),
   ];
 
   static Map<String, Widget Function(BuildContext)> routes = {
