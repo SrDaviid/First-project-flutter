@@ -1,5 +1,7 @@
-import 'package:fl_components/router/app_routes.dart';
 import 'package:flutter/material.dart';
+
+import 'package:fl_components/router/app_routes.dart';
+import 'package:fl_components/themes/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,7 +17,7 @@ class HomeScreen extends StatelessWidget {
           itemBuilder: (context, index) => ListTile(
                 title: Text(AppRoutes.menuOptions[index].name),
                 leading: Icon(AppRoutes.menuOptions[index].icon,
-                    color: Colors.indigo),
+                    color: AppTheme.primary),
                 onTap: () {
                   //Con este metodo puedes colocar la ruta directamente
                   Navigator.pushNamed(

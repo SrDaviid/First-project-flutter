@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:fl_components/themes/app_theme.dart';
 import 'package:fl_components/router/app_routes.dart';
 
 void main() => runApp(const MyApp());
@@ -10,18 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Material App',
-      // home: const CardScreen(),
-      initialRoute: AppRoutes.initialRoute,
-      routes: AppRoutes.getAppRoutes(),
-      onGenerateRoute: AppRoutes.onGenerateRoute,
-      theme: ThemeData.light().copyWith(
-          //Primary color
-          primaryColor: Colors.red,
-
-          //Appbar color
-          appBarTheme: const AppBarTheme(color: Colors.indigo, elevation: 0)),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Material App',
+        // home: const CardScreen(),
+        initialRoute: AppRoutes.initialRoute,
+        routes: AppRoutes.getAppRoutes(),
+        onGenerateRoute: AppRoutes.onGenerateRoute,
+        theme: AppTheme.lightTheme);
   }
 }
