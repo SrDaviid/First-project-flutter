@@ -15,16 +15,18 @@ class AppRoutes {
         icon: Icons.home_rounded),
 
     MenuOption(
-        route: 'listview1',
-        name: 'Listview Type 1',
-        screen: const Listview1Screen(),
-        icon: Icons.list_alt),
+      route: 'listview1',
+      name: 'Listview Type 1',
+      screen: const Listview1Screen(),
+      icon: Icons.list_alt,
+    ),
 
     MenuOption(
-        route: 'listview2',
-        name: 'Listview Type 2',
-        screen: const Listview2Screen(),
-        icon: Icons.list_outlined),
+      route: 'listview2',
+      name: 'Listview Type 2',
+      screen: const Listview2Screen(),
+      icon: Icons.list_outlined,
+    ),
 
     MenuOption(
         route: 'alert',
