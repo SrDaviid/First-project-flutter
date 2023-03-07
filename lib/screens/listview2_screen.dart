@@ -26,6 +26,7 @@ class Listview2Screen extends StatelessWidget {
                 color: Colors.indigo),
             onTap: () {
               final game = options[index];
+              // ignore: avoid_print
               print(game);
             },
           ),
