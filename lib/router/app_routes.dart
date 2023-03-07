@@ -7,33 +7,28 @@ class AppRoutes {
   static const initialRoute = 'home';
 
   static final menuOptions = <MenuOption>[
-    //TODO: borrar home
     MenuOption(
         route: 'home',
         name: 'Home Screen',
         screen: const HomeScreen(),
         icon: Icons.home_rounded),
-
     MenuOption(
       route: 'listview1',
       name: 'Listview Type 1',
       screen: const Listview1Screen(),
       icon: Icons.list_alt,
     ),
-
     MenuOption(
       route: 'listview2',
       name: 'Listview Type 2',
       screen: const Listview2Screen(),
       icon: Icons.list_outlined,
     ),
-
     MenuOption(
         route: 'alert',
         name: 'AlertScreen',
         screen: const AlertScreen(),
         icon: Icons.add_alert_outlined),
-
     MenuOption(
         route: 'card',
         name: 'CardScreen',
