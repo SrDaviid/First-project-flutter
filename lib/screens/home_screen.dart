@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
                 title: Text(AppRoutes.menuOptions[index].name),
                 leading: Icon(AppRoutes.menuOptions[index].icon,
                     //Icon Color
-                    color: AppTheme.lightAppbar),
+                    color: AppTheme.primary),
                 onTap: () {
                   //Con este metodo puedes colocar la ruta directamente
                   Navigator.pushNamed(
