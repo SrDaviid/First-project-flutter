@@ -11,7 +11,7 @@ class AppTheme {
       primaryColor: Colors.red,
 
       //Appbar Theme
-      appBarTheme: const AppBarTheme(color: primary, elevation: 0),
+      appBarTheme: const AppBarTheme(color: lightAppbar, elevation: 0),
 
       //Text Button Theme
       textButtonTheme: TextButtonThemeData(
@@ -20,7 +20,7 @@ class AppTheme {
   //Dark theme
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
       //Appbar Theme
-      appBarTheme: const AppBarTheme(color: Colors.grey, elevation: 0),
+      appBarTheme: AppBarTheme(color: Colors.green[900], elevation: 0),
 
       //Scaffold color
       scaffoldBackgroundColor: Colors.black);
