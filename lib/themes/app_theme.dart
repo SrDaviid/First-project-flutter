@@ -20,7 +20,7 @@ class AppTheme {
   //Dark theme
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
       //Appbar Theme
-      appBarTheme: const AppBarTheme(color: darkAppBar, elevation: 0),
+      appBarTheme: const AppBarTheme(color: Colors.grey, elevation: 0),
 
       //Scaffold color
       scaffoldBackgroundColor: Colors.black);
