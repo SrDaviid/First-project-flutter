@@ -11,11 +11,22 @@ class AppTheme {
       primaryColor: Colors.red,
 
       //Appbar Theme
-      appBarTheme: const AppBarTheme(color: lightAppbar, elevation: 0),
+      appBarTheme: const AppBarTheme(color: primary, elevation: 0),
 
       //Text Button Theme
       textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(foregroundColor: primary)));
+          style: TextButton.styleFrom(foregroundColor: primary)),
+
+      //Floating Action Button Theme
+      floatingActionButtonTheme:
+          const FloatingActionButtonThemeData(backgroundColor: primary),
+           
+      //Elevated Buttons
+      elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.indigo,
+              shape: const StadiumBorder(),
+              elevation: 0)));
 
   //Dark theme
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
