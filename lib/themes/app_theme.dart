@@ -20,7 +20,7 @@ class AppTheme {
       //Floating Action Button Theme
       floatingActionButtonTheme:
           const FloatingActionButtonThemeData(backgroundColor: primary),
-           
+
       //Elevated Buttons
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
