@@ -9,7 +9,7 @@ class CardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Card Widget"),
+          title: const Text("Parques Nacionales"),
           centerTitle: true,
         ),
         body: ListView(
