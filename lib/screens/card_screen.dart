@@ -15,14 +15,14 @@ class CardScreen extends StatelessWidget {
         body: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           children: const [
-            CustomCardType1(),
+            // CustomCardType1(),
             SizedBox(
               height: 10,
             ),
             CustomCardType2(
               name: "Parque Nacional Los Haitises",
               imageUrl:
-                  'http://www.godominicanrepublic.com/wp-content/uploads/2017/12/los-haitises-saman.jpg',
+                  'https://www.godominicanrepublic.com/wp-content/uploads/2017/12/los-haitises-saman.jpg',
             ),
             SizedBox(height: 10),
             CustomCardType2(
@@ -34,7 +34,7 @@ class CardScreen extends StatelessWidget {
             CustomCardType2(
               name: "Parque Nacional Monte Cristi",
               imageUrl:
-                  'https://images.visitarepublicadominicana.org/parque-nacional-monte-cristi-republica-dominicana.jpg',
+                  'https://wikidominicana.com/wp-content/uploads/2020/06/rmp14-montecristi-2048x1416.jpg',
             ),
             SizedBox(height: 10),
             CustomCardType2(
