@@ -17,7 +17,7 @@ class InputsScreen extends StatelessWidget {
           child: Column(children: [
             TextFormField(
               //This property allow me to auto direct the form with the keyword
-              autofocus: true,
+              autofocus: false,
               //This property put a initial text on the form
               initialValue: '',
               //This property allow me to start a word in uppercase
@@ -25,6 +25,24 @@ class InputsScreen extends StatelessWidget {
               onChanged: (value) {
                 print('value: $value');
               },
+              validator: (value) {
+                if (value == null) return 'This field is required';
+                return value.length < 3 ? 'The minimun is 3' : null;
+              },
+              autovalidateMode: AutovalidateMode.onUserInteraction,
+              decoration: const InputDecoration(
+                  hintText: 'Username',
+                  labelText: 'Name',
+                  helperText: 'Only text',
+                  // counterText: '3 words left'
+                  suffixIcon: Icon(
+                    Icons.group_outlined,
+                    color: Colors.indigo,
+                  ),
+                  // prefixIcon: Icon(
+                  //   Icons.verified_user_sharp,
+                  // ),
+                  icon: Icon(Icons.assignment_ind_outlined)),
             )
           ]),
         ),
