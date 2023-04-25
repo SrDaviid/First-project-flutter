@@ -27,44 +27,66 @@ class InputsScreen extends StatelessWidget {
           child: Form(
             key: myFormKey,
             child: Column(children: [
-              const CustomInputField(
+              CustomInputField(
                 labelText: 'Name',
                 hintText: 'Username',
+                formProperty: 'first_name',
+                formValues: formValues,
               ),
               const Padding(padding: EdgeInsets.symmetric(vertical: 15)),
-              const CustomInputField(
+              CustomInputField(
                 labelText: 'Last Name',
                 hintText: 'Subname',
+                formProperty: 'second_name',
+                formValues: formValues,
               ),
               const Padding(padding: EdgeInsets.symmetric(vertical: 15)),
-              const CustomInputField(
+              CustomInputField(
                 labelText: 'User mail',
                 hintText: 'Email',
                 keyboardType: TextInputType.emailAddress,
+                formProperty: 'email',
+                formValues: formValues,
               ),
               const Padding(padding: EdgeInsets.symmetric(vertical: 15)),
-              const CustomInputField(
+              CustomInputField(
                 labelText: 'Password',
                 hintText: 'User password',
                 obscureText: true,
+                formValues: formValues,
+                formProperty: 'password',
               ),
               const Padding(padding: EdgeInsets.symmetric(vertical: 15)),
+              DropdownButtonFormField(
+                items: const [
+                  DropdownMenuItem(value: 'Admin', child: Text('Admin')),
+                  DropdownMenuItem(value: 'SuperUser', child: Text('SuperUser')),
+                  DropdownMenuItem(value: 'Senior', child: Text('Senior')),
+                  DropdownMenuItem(value: 'Mid-Developer', child: Text('Mid-Developer')),
+                  DropdownMenuItem(value: 'Junior-Developer', child: Text('Junior-Developer')),
+                ],
+                onChanged: (value) {
+                  print(value);
+                  formValues['role'] = value ?? 'Admin';
+                },
+              ),
               ElevatedButton(
-                  onPressed: () {
-                    FocusScope.of(context).requestFocus(FocusNode());
-                    if (!myFormKey.currentState!.validate()) {
-                      print('Form not valid');
-                      return;
-                    }
-                    //* Imprimir valores del formulario
-                    print(formValues);
-                  },
-                  child: const SizedBox(
-                      width: double.infinity,
-                      child: Text(
-                        'Save',
-                        textAlign: TextAlign.center,
-                      )))
+                child: const SizedBox(
+                    width: double.infinity,
+                    child: Text(
+                      'Save',
+                      textAlign: TextAlign.center,
+                    )),
+                onPressed: () {
+                  FocusScope.of(context).requestFocus(FocusNode());
+                  if (!myFormKey.currentState!.validate()) {
+                    print('Form not valid');
+                    return;
+                  }
+                  //* Imprimir valores del formulario
+                  print(formValues);
+                },
+              )
             ]),
           ),
         ),
